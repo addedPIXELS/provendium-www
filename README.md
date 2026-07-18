@@ -21,10 +21,14 @@ Then visit `http://localhost:8000`.
 ## Structure
 
 ```
-index.html      Home: what it is and what it does
-about.html      About: the approach and privacy
-contact.html    Contact
-styles.css           Shared stylesheet
+index.html           Home: what it is and what it does
+features.html        Features: the deep dive, with on-brand UI mockups
+security.html        Security & privacy: how a Province's data is protected
+for-provinces.html   For Provinces: what you get, how to start, where we are
+about.html           About: the approach and privacy
+contact.html         Contact
+styles.css           Shared stylesheet (hand-rolled design system, no framework)
+icons.svg            Inline SVG icon sprite, referenced via <use href="icons.svg#…">
 provendium-mark.png  Logo (also used as the favicon)
 CNAME                Custom domain for GitHub Pages
 ```
@@ -43,10 +47,19 @@ This site is served by GitHub Pages from the repository root.
 
 ## Editing
 
-Plain HTML and CSS. `styles.css` holds the brand: navy chrome, a gold accent,
-Inter for body text and Source Serif 4 for headings (loaded from Google Fonts).
-The contact address `hello@provendium.app` appears in all three pages; update it
-in each if it changes.
+Plain HTML and CSS — no framework, no build step, no JavaScript. `styles.css`
+holds the brand: navy chrome, a gold accent, and two regalia accents (Craft
+blue, Royal Arch red) used to tag order/type in the UI mockups. Inter for body
+text and Source Serif 4 for headings (loaded from Google Fonts).
+
+Icons are a hand-rolled inline-SVG line set in `icons.svg`, used as
+`<svg class="icon"><use href="icons.svg#i-name"></use></svg>` and tinted with
+`currentColor`. Add a new icon by dropping another `<symbol>` into that file.
+
+The header and footer are repeated in each page (there is no include step), so a
+change to the nav or the footer must be made in every `*.html`. The contact
+address `hello@provendium.app` and the trademark/company footer line appear on
+every page; update them in each if they change.
 
 ## To add
 
