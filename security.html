@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="nav.js"></script>
 </head>
 <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -29,7 +30,11 @@
                 <img class="brand-mark" src="provendium-mark.png" alt="" width="30" height="30">
                 <span>Provendium&trade;</span>
             </a>
-            <nav class="nav" aria-label="Primary">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+                <svg class="icon icon-menu" aria-hidden="true"><use href="icons.svg#i-menu"></use></svg>
+                <svg class="icon icon-close" aria-hidden="true"><use href="icons.svg#i-close"></use></svg>
+            </button>
+            <nav class="nav" id="primary-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
                 <a href="security.html" aria-current="page">Security</a>
