@@ -29,6 +29,7 @@ about.html           About: the approach and privacy
 contact.html         Contact
 styles.css           Shared stylesheet (hand-rolled design system, no framework)
 icons.svg            Inline SVG icon sprite, referenced via <use href="icons.svg#…">
+nav.js               Small progressive-enhancement script for the mobile menu
 provendium-mark.png  Logo (also used as the favicon)
 CNAME                Custom domain for GitHub Pages
 ```
@@ -47,10 +48,12 @@ This site is served by GitHub Pages from the repository root.
 
 ## Editing
 
-Plain HTML and CSS — no framework, no build step, no JavaScript. `styles.css`
-holds the brand: navy chrome, a gold accent, and two regalia accents (Craft
-blue, Royal Arch red) used to tag order/type in the UI mockups. Inter for body
-text and Source Serif 4 for headings (loaded from Google Fonts).
+Plain HTML and CSS — no framework, no build step. The only script is `nav.js`,
+a small progressive enhancement for the mobile hamburger menu; pages ship with
+`class="no-js"` on `<html>` so the nav links stay visible if it never runs.
+`styles.css` holds the brand: navy chrome, a gold accent, and two regalia
+accents (Craft blue, Royal Arch red) used to tag order/type in the UI mockups.
+Inter for body text and Source Serif 4 for headings (loaded from Google Fonts).
 
 Icons are a hand-rolled inline-SVG line set in `icons.svg`, used as
 `<svg class="icon"><use href="icons.svg#i-name"></use></svg>` and tinted with
