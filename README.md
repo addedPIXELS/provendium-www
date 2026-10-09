@@ -1,6 +1,6 @@
 # provendium.app
 
-The website for Provendium™, the Provincial Compendium: a secure calendar and
+The website for Provendium®, the Provincial Compendium: a secure calendar and
 administration platform for the Provinces of English Freemasonry.
 
 Provendium is a product of [addedPIXELS](https://addedpixels.com).
@@ -72,7 +72,7 @@ every page; update them in each if they change.
 
 ## Trademark and copyright
 
-Provendium™ is a trademark of addedPIXELS Limited, registered in England &
+Provendium® is a registered trade mark of addedPIXELS Limited, registered in England &
 Wales (company no. 16220245). Registered office: Bank Chambers, Market Place,
 Stockport, Greater Manchester, SK1 1AR.
 
