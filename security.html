@@ -4,16 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Security &amp; privacy | Provendium</title>
-    <meta name="description" content="How Provendium protects a Province's data: each Province kept separate, contact details encrypted, members see only what they should, and passwordless sign-in with stronger options available.">
+    <meta name="description" content="How Provendium protects a Province's data: the data belongs to the Province, each Province is kept separate, sensitive details are encrypted, and members see only what their role needs.">
     <link rel="canonical" href="https://provendium.app/security.html">
     <link rel="icon" href="provendium-mark.png" type="image/png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Security &amp; privacy | Provendium">
-    <meta property="og:description" content="Privacy at the foundation, built for the discretion Freemasonry expects.">
-    <meta property="og:url" content="https://provendium.app/security.html">
-    <meta property="og:image" content="https://provendium.app/og.png">
-    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,20 +17,20 @@
 <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <header class="site-header">
-        <div class="container">
+    <header class="topbar">
+        <div class="page topbar-inner">
             <a class="brand" href="index.html">
-                <img class="brand-mark" src="provendium-mark.png" alt="" width="30" height="30">
-                <span>Provendium&reg;</span>
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
             </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
                 <svg class="icon icon-menu" aria-hidden="true"><use href="icons.svg#i-menu"></use></svg>
                 <svg class="icon icon-close" aria-hidden="true"><use href="icons.svg#i-close"></use></svg>
             </button>
-            <nav class="nav" id="primary-nav" aria-label="Primary">
+            <nav class="topnav" id="primary-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
-                <a href="security.html" aria-current="page">Security</a>
+                <a href="security.html" class="active" aria-current="page">Security</a>
                 <a href="for-provinces.html">For Provinces</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
@@ -46,135 +39,86 @@
     </header>
 
     <main id="main">
-        <section class="hero compact">
-            <div class="container fade-up">
-                <p class="eyebrow ruled">Security &amp; privacy</p>
+        <section class="page-head">
+            <div class="page">
+                <span class="hero-divider"></span>
                 <h1>Privacy at the foundation.</h1>
-                <p class="lede">Provendium&reg; holds a Province's diary and its members' details, so it is built for the discretion Freemasonry expects. Privacy is designed in from the start, not added on afterwards.</p>
+                <p>Provendium&reg; holds a Province's record and its members' details, so it is built for the discretion Freemasonry expects. Privacy is designed in from the start, not added on afterwards.</p>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow ruled">The principles</p>
-                    <h2>How your data is protected.</h2>
+        <section class="band">
+            <div class="page more-than">
+                <div class="say">
+                    <h2>How your data is protected</h2>
+                    <p>Members trust their Province with their information. Looking after it carefully has been part of Provendium from the first day.</p>
                 </div>
-                <div class="grid">
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-shield"></use></svg></span>
-                        <h3>Each Province kept separate</h3>
-                        <p>One Province's information is never visible to another. Separation is enforced in the system itself, at every layer, not left to a setting someone could forget.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-key"></use></svg></span>
-                        <h3>Contact details encrypted</h3>
-                        <p>Sensitive personal details (email, telephone and the like) are encrypted, with each Province's data protected by its own key. They are never left sitting in plain text.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-eye-off"></use></svg></span>
-                        <h3>Members see only what they should</h3>
-                        <p>Public information stays public and private information stays private. What a person can see and do follows the role they hold, not a blanket setting.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-lock"></use></svg></span>
-                        <h3>Sign in without a password</h3>
-                        <p>Members sign in with a secure link sent to them, so there is no password to forget or reuse. Stronger sign-in, such as a passkey or an authenticator app, is available for those who administer a Province.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-user"></use></svg></span>
-                        <h3>As little data as needed</h3>
-                        <p>Provendium keeps what a Province needs to run its diary and no more. Our own testing runs on anonymised data, so real contact details are only ever handled where they are genuinely in use.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-refresh"></use></svg></span>
-                        <h3>Backed up and recoverable</h3>
-                        <p>Data is backed up so a Province's records can be restored. Recovery is practised, not assumed. A backup you have never restored is only a hope.</p>
-                    </div>
+                <dl class="parts">
+                    <div><dt>The data belongs to the Province</dt><dd>Provendium looks after it on the Province's behalf. The Province is the data controller and decides how its data is used.</dd></div>
+                    <div><dt>Each Province kept separate</dt><dd>One Province's information is never visible to another. Separation is enforced in three layers of the system, so if one ever missed something the other two would still hold.</dd></div>
+                    <div><dt>Sensitive details encrypted</dt><dd>Email addresses, telephone numbers and dates of birth are encrypted with a key unique to each Province. Dietary and health information is encrypted too.</dd></div>
+                    <div><dt>Members see only what they should</dt><dd>What a person can see and do follows the role they hold. Area leaders see their own Areas, and a Secretary sees their own Lodge.</dd></div>
+                    <div><dt>Sign in without a password</dt><dd>Members sign in with a secure link sent to them, or with a passkey using Face ID or Touch ID, so there is no password to forget or reuse.</dd></div>
+                    <div><dt>The same rules for the app and the API</dt><dd>The Provendium app and any connected website follow the same permissions. Feeds are limited to the websites a Province approves, and their keys can be changed at any time.</dd></div>
+                    <div><dt>Backed up and recoverable</dt><dd>A backup is taken before every import and every release. Recovery is practised, not assumed.</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="band band-white">
+            <div class="page duo">
+                <div>
+                    <h3>Careful with every change</h3>
+                    <p>Daily updates to the record are checked before they are applied, and a file that looks wrong is held back. Changes to the platform are released to a separate staging system and checked there first. Our own testing runs on anonymised data, never on real contact details.</p>
+                </div>
+                <div>
+                    <h3>Yours to question</h3>
+                    <p>Provendium is an independent platform, run by addedPIXELS. We are glad to talk through data protection with whoever holds that responsibility in your Province, and to answer questions before anything is committed.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section alt">
-            <div class="container narrow">
-                <div class="duo">
-                    <div>
-                        <h2>Held with care</h2>
-                        <p class="lead">A Province validates the system by recognising its own people and Lodges. That means real names may be used to set a Province up, but contact details such as email, telephone and dates of birth are protected throughout, and kept encrypted.</p>
-                    </div>
-                    <div>
-                        <h2>Yours to question</h2>
-                        <p class="lead">Provendium is an independent platform, run by addedPIXELS. We are glad to talk through data protection with whoever holds that responsibility in your Province, and to answer questions before anything is committed.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow ruled">Questions</p>
-                    <h2>Common questions about data.</h2>
-                </div>
+        <section class="band">
+            <div class="page">
+                <h2>Common questions about data</h2>
                 <div class="faq">
-                    <details>
-                        <summary>Who can see our Province's information?</summary>
-                        <p>Only people from your Province, and only what their role allows. No other Province can see your data, and a member sees the public diary plus whatever concerns them directly, not the whole administration.</p>
-                    </details>
-                    <details>
-                        <summary>Where is the data held?</summary>
-                        <p>Provendium runs on dedicated infrastructure with each Province's records isolated from every other. We are happy to set out the hosting arrangements in detail for a Province considering it.</p>
-                    </details>
-                    <details>
-                        <summary>Do you use real member data to test the system?</summary>
-                        <p>No. Our development and testing environments run on anonymised data (placeholder contact details rather than the real thing), so real personal information is only ever handled where a Province is genuinely using it.</p>
-                    </details>
-                    <details>
-                        <summary>What happens to our data if we stop using Provendium?</summary>
-                        <p>It remains your Province's data. We will return it and remove it on request. It is a good question to raise with us directly, and we will put the arrangements in writing.</p>
-                    </details>
+                    <details><summary>Who can see our Province's information?</summary><p>Only people from your Province, and only what their role allows. No other Province can see your data, and a member sees the public diary plus whatever concerns them directly, not the whole administration.</p></details>
+                    <details><summary>Where is the data held?</summary><p>Provendium is hosted in the UK and EU, with each Province's records isolated from every other. We are happy to set out the hosting arrangements in detail for a Province considering it.</p></details>
+                    <details><summary>Can other websites or services get at our data through the API?</summary><p>Only the ones your Province approves, and only for what they need. A Lodge website can show its own calendar. It cannot read members' contact details. The Province can withdraw a connection at any time.</p></details>
+                    <details><summary>Do you use real member data to test the system?</summary><p>No. Our development and testing environments run on anonymised data, with placeholder contact details rather than the real thing.</p></details>
+                    <details><summary>What happens to our data if we stop using Provendium?</summary><p>It remains your Province's data. We will return it and remove it on request, and we will put the arrangements in writing.</p></details>
                 </div>
             </div>
         </section>
 
-        <section class="section alt">
-            <div class="container">
-                <div class="cta-band">
+        <section class="band band-white contact">
+            <div class="page">
+                <div>
                     <h2>Have a question about data protection?</h2>
                     <p>Ask us anything before you decide. We would rather answer it now than have you wonder.</p>
-                    <a class="btn btn-primary" href="contact.html">Get in touch</a>
                 </div>
+                <a class="mail" href="mailto:hello@provendium.app">hello@provendium.app</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="foot-cols">
-                <div>
-                    <a class="brand" href="index.html">Provendium</a>
-                    <div class="foot-tag">The Provincial Compendium. The diary, the registers and the administration for your Province, in one place.</div>
-                    <div class="foot-meta" style="margin-top:14px"><span>A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a></span></div>
-                </div>
-                <div>
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="security.html">Security &amp; privacy</a></li>
-                        <li><a href="for-provinces.html">For Provinces</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Provendium</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="mailto:hello@provendium.app">hello@provendium.app</a></li>
-                    </ul>
-                </div>
+        <div class="page">
+            <div class="foot-row">
+                <a class="brand" href="index.html">
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
+            </a>
+                <nav class="foot-nav" aria-label="Footer">
+                    <a href="features.html">Features</a>
+                    <a href="security.html">Security and privacy</a>
+                    <a href="for-provinces.html">For Provinces</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mailto:hello@provendium.app">hello@provendium.app</a>
+                </nav>
             </div>
-            <hr class="foot-divider">
-            <p class="foot-small">An independent software platform for Masonic Provinces. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
+            <p class="foot-small">An independent software platform for Masonic Provinces. A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a>. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
         </div>
     </footer>
 </body>

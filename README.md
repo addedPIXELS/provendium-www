@@ -1,12 +1,12 @@
 # provendium.app
 
-The website for Provendium®, the Provincial Compendium: a secure calendar and
-administration platform for the Provinces of English Freemasonry.
+The website for Provendium®, the Provincial Compendium: one source of truth
+for the Provinces of English Freemasonry. The record, the diary, Lodge
+administration, dining, reporting and the member app, on one platform.
 
 Provendium is a product of [addedPIXELS](https://addedpixels.com).
 
-A small static site. Three pages, one stylesheet, no build step, no framework,
-no JavaScript.
+A small static site. Six pages, one stylesheet, no build step, no framework.
 
 ## Preview locally
 
@@ -21,16 +21,19 @@ Then visit `http://localhost:8000`.
 ## Structure
 
 ```
-index.html           Home: what it is and what it does
-features.html        Features: the deep dive, with on-brand UI mockups
+index.html           Home: not just a diary, one meeting followed through, by role
+features.html        Features: the seven parts, each with an illustrative screen
 security.html        Security & privacy: how a Province's data is protected
 for-provinces.html   For Provinces: what you get, how to start, where we are
-about.html           About: the approach and privacy
+about.html           About: the approach and who builds it
 contact.html         Contact
-styles.css           Shared stylesheet (hand-rolled design system, no framework)
+styles.css           Shared stylesheet (see "Brand" below)
+nav.js               Progressive enhancement for the mobile menu
+site.js              Progressive enhancement: diary filters, role tabs, reply demo
 icons.svg            Inline SVG icon sprite, referenced via <use href="icons.svg#…">
-nav.js               Small progressive-enhancement script for the mobile menu
+app-*.jpg            Screenshots of the Provendium iPhone app
 provendium-mark.png  Logo (also used as the favicon)
+og.png               Social link-preview image
 CNAME                Custom domain for GitHub Pages
 ```
 
@@ -48,32 +51,29 @@ This site is served by GitHub Pages from the repository root.
 
 ## Editing
 
-Plain HTML and CSS — no framework, no build step. The only script is `nav.js`,
-a small progressive enhancement for the mobile hamburger menu; pages ship with
-`class="no-js"` on `<html>` so the nav links stay visible if it never runs.
-`styles.css` holds the brand: navy chrome, a gold accent, and two regalia
-accents (Craft blue, Royal Arch red) used to tag order/type in the UI mockups.
-Inter for body text and Source Serif 4 for headings (loaded from Google Fonts).
+Plain HTML and CSS: no framework, no build step. The header and footer are
+repeated in each page, so a change to the navigation is made in all six.
 
-Icons are a hand-rolled inline-SVG line set in `icons.svg`, used as
-`<svg class="icon"><use href="icons.svg#i-name"></use></svg>` and tinted with
-`currentColor`. Add a new icon by dropping another `<symbol>` into that file.
+### Brand
 
-The header and footer are repeated in each page (there is no include step), so a
-change to the nav or the footer must be made in every `*.html`. The contact
-address `hello@provendium.app` and the trademark/company footer line appear on
-every page; update them in each if they change.
+The site uses the same brand as the Provendium app. The first half of
+`styles.css` mirrors the app's own stylesheet: the navy chrome, the gold
+accent, the Craft, Royal Arch, Provincial and Social colours, Inter for text
+and Source Serif 4 for headings, and component classes such as `.btn`,
+`.badge`, `.pv-card`, `.cal-evt` and `.kpi`. If the app's palette or type
+changes, change it here too. The second half of the file is the layout of the
+marketing pages.
 
-## To add
+### Illustrative screens
 
-- `og.png` (1200x630) for link previews. The pages already reference
-  `https://provendium.app/og.png`; add the file when artwork is ready.
-- A logo, if preferred over the text wordmark.
+The diary, registers, seating plan and reports shown on the pages are
+hand-written HTML using those component classes, with made-up names and
+figures. They are not screenshots and hold no real data. The `app-*.jpg`
+images are real screenshots of the iPhone app running on demonstration data.
 
-## Trademark and copyright
+### Scripts
 
-Provendium® is a registered trade mark of addedPIXELS Limited, registered in England &
-Wales (company no. 16220245). Registered office: Bank Chambers, Market Place,
-Stockport, Greater Manchester, SK1 1AR.
-
-© 2026 addedPIXELS Limited. All rights reserved.
+Pages ship with `class="no-js"` on `<html>`. `nav.js` removes it before first
+paint. Without scripting the navigation links stay visible, the diary shows in
+full, and every role panel on the home page is shown one after another.
+`site.js` adds the diary filters, the role tabs and the reply demo.

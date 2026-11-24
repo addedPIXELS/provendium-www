@@ -4,16 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>For Provinces | Provendium</title>
-    <meta name="description" content="For Provinces considering Provendium: what you get, how a Province gets started, and where the project is today. Bring your records across and publish your diary in one system.">
+    <meta name="description" content="For Provinces considering Provendium: what you get, how a Province gets started, and how to switch on each part when you are ready.">
     <link rel="canonical" href="https://provendium.app/for-provinces.html">
     <link rel="icon" href="provendium-mark.png" type="image/png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="For Provinces | Provendium">
-    <meta property="og:description" content="What you get, how to get started, and where the project is today.">
-    <meta property="og:url" content="https://provendium.app/for-provinces.html">
-    <meta property="og:image" content="https://provendium.app/og.png">
-    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,21 +17,21 @@
 <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <header class="site-header">
-        <div class="container">
+    <header class="topbar">
+        <div class="page topbar-inner">
             <a class="brand" href="index.html">
-                <img class="brand-mark" src="provendium-mark.png" alt="" width="30" height="30">
-                <span>Provendium&reg;</span>
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
             </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
                 <svg class="icon icon-menu" aria-hidden="true"><use href="icons.svg#i-menu"></use></svg>
                 <svg class="icon icon-close" aria-hidden="true"><use href="icons.svg#i-close"></use></svg>
             </button>
-            <nav class="nav" id="primary-nav" aria-label="Primary">
+            <nav class="topnav" id="primary-nav" aria-label="Primary">
                 <a href="index.html">Home</a>
                 <a href="features.html">Features</a>
                 <a href="security.html">Security</a>
-                <a href="for-provinces.html" aria-current="page">For Provinces</a>
+                <a href="for-provinces.html" class="active" aria-current="page">For Provinces</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -46,182 +39,99 @@
     </header>
 
     <main id="main">
-        <section class="hero compact">
-            <div class="container fade-up">
-                <p class="eyebrow ruled">For Provinces</p>
+        <section class="page-head">
+            <div class="page">
+                <span class="hero-divider"></span>
                 <h1>Considering Provendium for your Province?</h1>
-                <p class="lede">Provendium&reg; is built for the Provincial Office and the people around it. It brings the diary, the registers and the administration into one system, and it can start from the records you already keep.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="contact.html">Arrange a conversation</a>
-                    <a class="btn btn-ghost" href="features.html">See what it does</a>
+                <p>Provendium&reg; is built for the Provincial Office and everyone around it. It starts from the records you already keep, and you switch on each part when your Province is ready for it.</p>
+                <div class="actions">
+                    <a class="btn btn-gold" href="contact.html">Arrange a conversation</a>
+                    <a class="btn btn-onnavy" href="features.html">See what it does</a>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow ruled">What you get</p>
-                    <h2>One place for the work of a Provincial year.</h2>
+        <section class="band">
+            <div class="page more-than">
+                <div class="say">
+                    <h2>What your Province gets</h2>
+                    <p>Most Provinces start with the diary. Nothing obliges you to stop there, and nothing obliges you to go further.</p>
                 </div>
-                <div class="grid">
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-calendar"></use></svg></span>
-                        <h3>One diary, one source of truth</h3>
-                        <p>Every Lodge and Chapter meeting planned and published from the same place, instead of a spreadsheet and a website widget that drift apart.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-monitor"></use></svg></span>
-                        <h3>Your website, kept current</h3>
-                        <p>An embedded calendar that matches your site and updates itself, so the diary members see is always the live one.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-landmark"></use></svg></span>
-                        <h3>Registers without the spreadsheets</h3>
-                        <p>Units, officers and members held together, with each Brother's service kept as a record rather than re-typed each year.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-utensils"></use></svg></span>
-                        <h3>Meetings that run themselves</h3>
-                        <p>Invitations, replies, dining numbers, seating and summons handled in one flow, so the Office and the DC team work from the same picture.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-shield"></use></svg></span>
-                        <h3>Privacy you can stand behind</h3>
-                        <p>Each Province kept separate, contact details encrypted, and members seeing only what they should. <a href="security.html">More on security &amp; privacy</a>.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-upload"></use></svg></span>
-                        <h3>No blank sheet to fill</h3>
-                        <p>We can bring your existing membership records across, so the system arrives already recognising your Lodges and Brethren.</p>
-                    </div>
-                </div>
+                <dl class="parts">
+                    <div><dt>One source of truth</dt><dd>A single record of members, Lodges, Chapters, offices and ranks, so reports, emails and calendars agree.</dd></div>
+                    <div><dt>Your website, kept current</dt><dd>A calendar and a Lodge directory that match your site and update themselves, fed by the Provendium API.</dd></div>
+                    <div><dt>Less work for Secretaries</dt><dd>Meetings that create themselves, the Summons Builder, and notices that go out when something changes.</dd></div>
+                    <div><dt>Occasions that run themselves</dt><dd>Invitations, replies, ticketing, dining numbers and seating in one flow, so the Office and the DC team work from the same picture.</dd></div>
+                    <div><dt>Answers for the leadership</dt><dd>Membership and Installation reports on screen, for the Province and for each Area.</dd></div>
+                    <div><dt>Something for every member</dt><dd>Their own meetings, invitations and record, on the web and in the Provendium app.</dd></div>
+                    <div><dt>Privacy you can stand behind</dt><dd>The data stays the Province's. <a href="security.html">More on security and privacy</a>.</dd></div>
+                </dl>
             </div>
         </section>
 
-        <section class="section alt">
-            <div class="container narrow">
-                <div class="section-head">
-                    <p class="eyebrow ruled">How it works</p>
-                    <h2>Getting started, step by step.</h2>
-                </div>
-                <div class="steps">
-                    <div class="step">
-                        <div class="n" aria-hidden="true"></div>
-                        <div>
-                            <h3>Get in touch</h3>
-                            <p>Tell us about your Province and what you would like Provendium to do. We will talk it through and answer your questions, including on data protection.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="n" aria-hidden="true"></div>
-                        <div>
-                            <h3>We bring your records across</h3>
-                            <p>Your existing membership records (Brethren, units, offices, ranks and the forward calendar) are imported and checked, so you start from where you already are.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="n" aria-hidden="true"></div>
-                        <div>
-                            <h3>Set up with your Office</h3>
-                            <p>We work with the Provincial Office to get the diary, the officers and the settings right, and to make sure the people who run it recognise their own Province in it.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="n" aria-hidden="true"></div>
-                        <div>
-                            <h3>Publish your calendar</h3>
-                            <p>Embed the calendar on your Provincial website and open the subscribable feeds, so members can see and follow the diary straight away.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="n" aria-hidden="true"></div>
-                        <div>
-                            <h3>Roll out to Lodges and members</h3>
-                            <p>Bring in invitations, replies, dining and seating at the pace that suits you, so the Office and the DC team adopt it without disruption.</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="band band-white">
+            <div class="page">
+                <h2>Getting started, step by step</h2>
+                <ol class="stages">
+                    <li class="stage"><div class="stage-rail" aria-hidden="true"></div><div class="stage-main solo"><div class="stage-copy"><h3>Get in touch</h3><p>Tell us about your Province and what you would like Provendium to do. We will talk it through and answer your questions, including on data protection.</p></div></div></li>
+                    <li class="stage"><div class="stage-rail" aria-hidden="true"></div><div class="stage-main solo"><div class="stage-copy"><h3>We bring your records across</h3><p>Your existing membership records are imported and checked: Brethren, units, offices, ranks and the forward calendar. You start from where you already are.</p></div></div></li>
+                    <li class="stage"><div class="stage-rail" aria-hidden="true"></div><div class="stage-main solo"><div class="stage-copy"><h3>Set up with your Office</h3><p>We work with the Provincial Office to get the diary, the officers and the settings right, and to make sure the people who run it recognise their own Province in it.</p></div></div></li>
+                    <li class="stage"><div class="stage-rail" aria-hidden="true"></div><div class="stage-main solo"><div class="stage-copy"><h3>Publish your calendar</h3><p>Put the calendar on your Provincial website and open the feeds, so members can see and follow the diary straight away.</p></div></div></li>
+                    <li class="stage"><div class="stage-rail" aria-hidden="true"></div><div class="stage-main solo"><div class="stage-copy"><h3>Switch on the rest when you are ready</h3><p>Invitations, dining and seating, ticketing, the Summons Builder, reporting and the app each come in at the pace that suits you. Each Lodge and Chapter decides whether to use the Lodge tools.</p></div></div></li>
+                </ol>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container narrow">
-                <p class="eyebrow ruled">Where we are</p>
-                <h2>In a Provincial pilot.</h2>
-                <p class="lead">Provendium is in use in a Provincial pilot, and being readied for wider release. That means it is built on real Provincial needs and real data, and that an early Province has a genuine hand in shaping it.</p>
-                <div class="note mt-2">
-                    <svg class="icon" aria-hidden="true"><use href="icons.svg#i-check"></use></svg>
-                    <p>If your Province would like to see it in use, or to be among the first to adopt it, we would be glad to arrange a conversation.</p>
-                </div>
+        <section class="band">
+            <div class="page prose">
+                <h2>In daily use, and still growing</h2>
+                <p class="first">Provendium is in daily use in its first Province, and it is built to serve many.</p>
+                <p>Each Province that joins has its own data, its own keys, its own branding and its own settings on the same platform. It has been shaped by real Provincial needs and real records, and a Province that joins now has a genuine hand in where it goes next.</p>
+                <p>If your Province would like to see it in use, we would be glad to arrange a conversation.</p>
             </div>
         </section>
 
-        <section class="section alt">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow ruled">Questions</p>
-                    <h2>What Provinces ask us.</h2>
-                </div>
+        <section class="band band-white">
+            <div class="page">
+                <h2>What Provinces ask us</h2>
                 <div class="faq">
-                    <details>
-                        <summary>Does it cover both Craft and Royal Arch?</summary>
-                        <p>Yes. The diary, the registers and the meetings handle Craft and Royal Arch together, and a Brother who serves in both appears as one person with both affiliations.</p>
-                    </details>
-                    <details>
-                        <summary>Do we have to move everything at once?</summary>
-                        <p>No. Most Provinces start with the diary and the website calendar, then bring in invitations, dining and seating as they are ready. You set the pace.</p>
-                    </details>
-                    <details>
-                        <summary>Will it fit our existing website?</summary>
-                        <p>The embedded calendar is styled to sit within your Provincial website and is locked to your own domains. It renders on your page rather than sending members elsewhere.</p>
-                    </details>
-                    <details>
-                        <summary>Can you bring our current records across?</summary>
-                        <p>In most cases, yes. Provendium is designed to import a Province's existing membership records, checked before anything is applied, so you are not starting from scratch.</p>
-                    </details>
+                    <details><summary>Does it cover both Craft and Royal Arch?</summary><p>Yes. The diary, the registers and the meetings handle Craft and Royal Arch together, and a Brother who serves in both appears as one person with both affiliations.</p></details>
+                    <details><summary>Do we have to take everything at once?</summary><p>No. Most Provinces start with the diary and the website calendar, then bring in the other parts as they are ready. You set the pace.</p></details>
+                    <details><summary>Does it replace the records Grand Lodge holds?</summary><p>No. The official Grand Lodge records remain the official records. Provendium works from the membership records your Province already keeps and holds the Province's own working information around them.</p></details>
+                    <details><summary>Will it fit our existing website?</summary><p>The calendar is styled to sit within your Provincial website and is limited to your own domains. It appears on your page rather than sending members elsewhere.</p></details>
+                    <details><summary>Do our Lodges have to change how they work?</summary><p>No. The Lodge and Chapter tools are there for the units that want them. Nothing changes how a unit runs unless it chooses to take them up.</p></details>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="cta-band">
+        <section class="band contact">
+            <div class="page">
+                <div>
                     <h2>Let's talk about your Province.</h2>
                     <p>Tell us your Province and what you would like to know. We read every message and reply ourselves.</p>
-                    <a class="btn btn-primary" href="contact.html">Get in touch</a>
                 </div>
+                <a class="mail" href="mailto:hello@provendium.app">hello@provendium.app</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="foot-cols">
-                <div>
-                    <a class="brand" href="index.html">Provendium</a>
-                    <div class="foot-tag">The Provincial Compendium. The diary, the registers and the administration for your Province, in one place.</div>
-                    <div class="foot-meta" style="margin-top:14px"><span>A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a></span></div>
-                </div>
-                <div>
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="security.html">Security &amp; privacy</a></li>
-                        <li><a href="for-provinces.html">For Provinces</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Provendium</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="mailto:hello@provendium.app">hello@provendium.app</a></li>
-                    </ul>
-                </div>
+        <div class="page">
+            <div class="foot-row">
+                <a class="brand" href="index.html">
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
+            </a>
+                <nav class="foot-nav" aria-label="Footer">
+                    <a href="features.html">Features</a>
+                    <a href="security.html">Security and privacy</a>
+                    <a href="for-provinces.html">For Provinces</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mailto:hello@provendium.app">hello@provendium.app</a>
+                </nav>
             </div>
-            <hr class="foot-divider">
-            <p class="foot-small">An independent software platform for Masonic Provinces. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
+            <p class="foot-small">An independent software platform for Masonic Provinces. A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a>. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
         </div>
     </footer>
 </body>

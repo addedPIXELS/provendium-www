@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Provendium: the Provincial Compendium</title>
-    <meta name="description" content="Provendium is a secure calendar and administration platform for the Provinces of English Freemasonry. The diary, the registers, invitations, seating, summons and notices, in one place.">
+    <meta name="description" content="Provendium is one source of truth for a Masonic Province: the record of its members, Lodges and Chapters, with the diary, Lodge administration, dining, reporting and a member app working from it.">
     <link rel="canonical" href="https://provendium.app/">
     <link rel="icon" href="provendium-mark.png" type="image/png">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Provendium: the Provincial Compendium">
-    <meta property="og:description" content="A secure calendar and administration platform for the Provinces of English Freemasonry.">
+    <meta property="og:description" content="One source of truth for a Masonic Province: the record, the diary, Lodge administration, dining and reporting in one secure platform.">
     <meta property="og:url" content="https://provendium.app/">
     <meta property="og:image" content="https://provendium.app/og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,22 +20,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="nav.js"></script>
+    <script src="site.js" defer></script>
 </head>
 <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <header class="site-header">
-        <div class="container">
+    <header class="topbar">
+        <div class="page topbar-inner">
             <a class="brand" href="index.html">
-                <img class="brand-mark" src="provendium-mark.png" alt="" width="30" height="30">
-                <span>Provendium&reg;</span>
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
             </a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
                 <svg class="icon icon-menu" aria-hidden="true"><use href="icons.svg#i-menu"></use></svg>
                 <svg class="icon icon-close" aria-hidden="true"><use href="icons.svg#i-close"></use></svg>
             </button>
-            <nav class="nav" id="primary-nav" aria-label="Primary">
-                <a href="index.html" aria-current="page">Home</a>
+            <nav class="topnav" id="primary-nav" aria-label="Primary">
+                <a href="index.html" class="active" aria-current="page">Home</a>
                 <a href="features.html">Features</a>
                 <a href="security.html">Security</a>
                 <a href="for-provinces.html">For Provinces</a>
@@ -46,253 +47,467 @@
     </header>
 
     <main id="main">
-        <section class="hero hero-split">
-            <div class="container fade-up">
-                <div class="hero-copy">
-                    <p class="eyebrow ruled">The Provincial Compendium</p>
-                    <h1>The diary and administration for your Province, in one place.</h1>
-                    <p class="lede">Provendium&reg; is a secure calendar and administration platform for the Provinces of English Freemasonry. It brings the Provincial diary, the registers, invitations, seating and notices into a single system, instead of spreadsheets, documents and a separate calendar widget.</p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="features.html">See what it does</a>
-                        <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+        <section class="hero">
+            <div class="page">
+                <div>
+                    <span class="hero-divider"></span>
+                    <h1>One source of truth for your Province.</h1>
+                </div>
+                <div>
+                    <p>Provendium&reg; is a secure platform for the Provinces of English Freemasonry. Most people meet it as a calendar like the one below. The calendar is one part of it.</p>
+                    <div class="actions">
+                        <a class="btn btn-gold" href="#more">See what is behind it</a>
+                        <a class="btn btn-onnavy" href="contact.html">Get in touch</a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="mock" role="img" aria-label="A Provincial diary showing Craft and Royal Arch meetings across a month.">
-                        <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mock-title"><svg class="icon" aria-hidden="true"><use href="icons.svg#i-calendar"></use></svg>Provincial Diary</span></div>
-                        <div class="mock-body">
-                            <div class="cal-head"><span class="cal-month">June 2026</span><span class="cal-sub">Craft &amp; Royal Arch</span></div>
-                            <div class="cal-grid">
-                                <span class="dow">M</span><span class="dow">T</span><span class="dow">W</span><span class="dow">T</span><span class="dow">F</span><span class="dow">S</span><span class="dow">S</span>
-                                <div class="cal-cell dim"><span class="d">26</span></div>
-                                <div class="cal-cell dim"><span class="d">27</span></div>
-                                <div class="cal-cell"><span class="d">28</span></div>
-                                <div class="cal-cell"><span class="d">29</span></div>
-                                <div class="cal-cell"><span class="d">30</span><span class="ev craft"></span></div>
-                                <div class="cal-cell"><span class="d">31</span></div>
-                                <div class="cal-cell"><span class="d">1</span></div>
-                                <div class="cal-cell"><span class="d">2</span></div>
-                                <div class="cal-cell"><span class="d">3</span><span class="ev ra"></span></div>
-                                <div class="cal-cell"><span class="d">4</span></div>
-                                <div class="cal-cell"><span class="d">5</span><span class="ev craft two"></span><span class="ev gold" style="background:var(--gold)"></span></div>
-                                <div class="cal-cell"><span class="d">6</span></div>
-                                <div class="cal-cell"><span class="d">7</span></div>
-                                <div class="cal-cell"><span class="d">8</span></div>
-                                <div class="cal-cell"><span class="d">9</span></div>
-                                <div class="cal-cell"><span class="d">10</span><span class="ev craft"></span></div>
-                                <div class="cal-cell"><span class="d">11</span></div>
-                                <div class="cal-cell"><span class="d">12</span><span class="ev ra"></span></div>
-                                <div class="cal-cell"><span class="d">13</span></div>
-                                <div class="cal-cell"><span class="d">14</span></div>
-                                <div class="cal-cell"><span class="d">15</span></div>
-                                <div class="cal-cell"><span class="d">16</span></div>
-                                <div class="cal-cell"><span class="d">17</span><span class="ev craft"></span></div>
-                                <div class="cal-cell"><span class="d">18</span></div>
-                                <div class="cal-cell"><span class="d">19</span></div>
-                                <div class="cal-cell"><span class="d">20</span></div>
-                                <div class="cal-cell"><span class="d">21</span><span class="ev gold" style="background:var(--gold)"></span></div>
-                                <div class="cal-cell"><span class="d">22</span></div>
-                            </div>
-                            <div class="cal-legend"><span><i class="l-craft"></i>Craft</span><span><i class="l-ra"></i>Royal Arch</span><span><i class="l-social"></i>Social</span></div>
+            </div>
+        </section>
+
+        <div class="page diary-wrap" data-diary-scope>
+            <div class="pv-card diary-card">
+                <div class="pv-card-body">
+                    <div class="cal-controls">
+                        <span class="cal-month">June 2026</span>
+                        <div class="filter-row needs-js" role="group" aria-label="Show meetings">
+                            <button class="filter-pill" type="button" data-diary-filter="all" aria-pressed="true">All</button>
+                            <button class="filter-pill" type="button" data-diary-filter="craft" aria-pressed="false"><span class="dot craft"></span>Craft</button>
+                            <button class="filter-pill" type="button" data-diary-filter="arch" aria-pressed="false"><span class="dot arch"></span>Royal Arch</button>
+                            <button class="filter-pill" type="button" data-diary-filter="prov" aria-pressed="false"><span class="dot prov"></span>Provincial</button>
+                            <button class="filter-pill" type="button" data-diary-filter="social" aria-pressed="false"><span class="dot social"></span>Social</button>
                         </div>
                     </div>
-                    <p class="mock-caption">One diary for every Lodge and Chapter (illustrative)</p>
+                    <div class="cal-grid" aria-hidden="true">
+                        <div class="cal-day-head">Mon</div><div class="cal-day-head">Tue</div><div class="cal-day-head">Wed</div><div class="cal-day-head">Thu</div><div class="cal-day-head">Fri</div><div class="cal-day-head">Sat</div><div class="cal-day-head">Sun</div>
+                        <div class="cal-cell"><span class="cal-num">1</span></div>
+                        <div class="cal-cell"><span class="cal-num">2</span></div>
+                        <div class="cal-cell"><span class="cal-num">3</span><span class="cal-evt craft" data-kind="craft"><span>Lodge of Fidelity No. 289</span><span class="t">6:30pm, Regular meeting</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">4</span></div>
+                        <div class="cal-cell"><span class="cal-num">5</span><span class="cal-evt arch" data-kind="arch"><span>Chapter of Unity No. 321</span><span class="t">6:00pm, Installation</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">6</span></div>
+                        <div class="cal-cell"><span class="cal-num">7</span></div>
+                        <div class="cal-cell"><span class="cal-num">8</span></div>
+                        <div class="cal-cell"><span class="cal-num">9</span></div>
+                        <div class="cal-cell"><span class="cal-num">10</span><span class="cal-evt craft is-focus" data-kind="craft"><span>Lodge of St John No. 104</span><span class="t">6:00pm, Installation</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">11</span></div>
+                        <div class="cal-cell"><span class="cal-num">12</span><span class="cal-evt arch" data-kind="arch"><span>Chapter of Harmony No. 58</span><span class="t">6:30pm, Convocation</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">13</span><span class="cal-evt prov" data-kind="prov"><span>Provincial Grand Lodge</span><span class="t">2:00pm, Annual meeting</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">14</span></div>
+                        <div class="cal-cell"><span class="cal-num">15</span></div>
+                        <div class="cal-cell"><span class="cal-num">16</span></div>
+                        <div class="cal-cell"><span class="cal-num">17</span><span class="cal-evt craft" data-kind="craft"><span>Lodge of Benevolence No. 336</span><span class="t">5:00pm, Centenary meeting</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">18</span></div>
+                        <div class="cal-cell"><span class="cal-num">19</span></div>
+                        <div class="cal-cell"><span class="cal-num">20</span></div>
+                        <div class="cal-cell"><span class="cal-num">21</span><span class="cal-evt social" data-kind="social"><span>Provincial Garden Party</span><span class="t">1:00pm, Social</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">22</span></div>
+                        <div class="cal-cell"><span class="cal-num">23</span></div>
+                        <div class="cal-cell"><span class="cal-num">24</span><span class="cal-evt craft" data-kind="craft"><span>Lodge of Unanimity No. 89</span><span class="t">6:30pm, Regular meeting</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">25</span></div>
+                        <div class="cal-cell"><span class="cal-num">26</span><span class="cal-evt arch" data-kind="arch"><span>Chapter of Fidelity No. 289</span><span class="t">6:30pm, Convocation</span></span></div>
+                        <div class="cal-cell"><span class="cal-num">27</span></div>
+                        <div class="cal-cell"><span class="cal-num">28</span></div>
+                        <div class="cal-cell"><span class="cal-num">29</span></div>
+                        <div class="cal-cell"><span class="cal-num">30</span></div>
+                        <div class="cal-cell dim"><span class="cal-num">1</span></div>
+                        <div class="cal-cell dim"><span class="cal-num">2</span></div>
+                        <div class="cal-cell dim"><span class="cal-num">3</span></div>
+                        <div class="cal-cell dim"><span class="cal-num">4</span></div>
+                        <div class="cal-cell dim"><span class="cal-num">5</span></div>
+                    </div>
+                    <ul class="cal-list">
+                        <li data-kind="craft"><span class="when"><b>3</b><span>Wed</span></span><span class="rail craft"></span><span class="what"><b>Lodge of Fidelity No. 289</b><span>Regular meeting, 6:30pm, Masonic Hall</span></span></li>
+                        <li data-kind="arch"><span class="when"><b>5</b><span>Fri</span></span><span class="rail arch"></span><span class="what"><b>Chapter of Unity No. 321</b><span>Installation, 6:00pm, Provincial Hall</span></span></li>
+                        <li data-kind="craft" class="is-focus"><span class="when"><b>10</b><span>Wed</span></span><span class="rail craft"></span><span class="what"><b>Lodge of St John No. 104</b><span>Installation, 6:00pm, Masonic Hall</span></span></li>
+                        <li data-kind="arch"><span class="when"><b>12</b><span>Fri</span></span><span class="rail arch"></span><span class="what"><b>Chapter of Harmony No. 58</b><span>Convocation, 6:30pm, Provincial Hall</span></span></li>
+                        <li data-kind="prov"><span class="when"><b>13</b><span>Sat</span></span><span class="rail prov"></span><span class="what"><b>Provincial Grand Lodge</b><span>Annual meeting, 2:00pm, Provincial Hall</span></span></li>
+                        <li data-kind="craft"><span class="when"><b>17</b><span>Wed</span></span><span class="rail craft"></span><span class="what"><b>Lodge of Benevolence No. 336</b><span>Centenary meeting, 5:00pm, Masonic Hall</span></span></li>
+                        <li data-kind="social"><span class="when"><b>21</b><span>Sun</span></span><span class="rail social"></span><span class="what"><b>Provincial Garden Party</b><span>Social, 1:00pm, The Grange</span></span></li>
+                        <li data-kind="craft"><span class="when"><b>24</b><span>Wed</span></span><span class="rail craft"></span><span class="what"><b>Lodge of Unanimity No. 89</b><span>Regular meeting, 6:30pm, Masonic Hall</span></span></li>
+                        <li data-kind="arch"><span class="when"><b>26</b><span>Fri</span></span><span class="rail arch"></span><span class="what"><b>Chapter of Fidelity No. 289</b><span>Convocation, 6:30pm, Provincial Hall</span></span></li>
+                    </ul>
+                </div>
+                <div class="pv-card-footer"><span data-diary-count aria-live="polite">Showing 9 of 9 meetings</span><span>An illustrative Provincial diary<span class="needs-js">. The filters work.</span></span></div>
+            </div>
+        </div>
+
+        <section class="band" id="more">
+            <div class="page more-than">
+                <div class="say">
+                    <h2>It is not just a diary.</h2>
+                    <p>The diary was the first problem Provendium solved, because it was the most urgent one. It was never the whole plan.</p>
+                    <p>A compendium gathers everything of value into one authoritative volume. Provendium does that for a Province: one trusted record of its members, Lodges and Chapters, kept current every day, with everything else working from it.</p>
+                    <p class="etymology" aria-label="Provincial compendium"><b>Prov</b>incial comp<b>endium</b></p>
+                </div>
+                <div>
+                    <dl class="parts">
+                        <div><dt><a href="features.html#record">The Provincial record</a></dt><dd>One record for every member, Lodge and Chapter, with the offices and ranks they hold.</dd></div>
+                        <div class="is-diary"><dt><a href="features.html#meetings">Meetings and the diary</a></dt><dd>Every meeting, from regular meetings to Provincial celebrations, with ticketing for the larger occasions.</dd></div>
+                        <div><dt><a href="features.html#administration">Lodge and Chapter administration</a></dt><dd>The Summons Builder, officers and Installations, working from the same records.</dd></div>
+                        <div><dt><a href="features.html#dining">Dining and hospitality</a></dt><dd>Replies, seating and dietary needs, from the invitation to the festive board.</dd></div>
+                        <div><dt><a href="features.html#reporting">Leadership and reporting</a></dt><dd>What the Rulers, the Office and the Areas need to see, on screen or exported.</dd></div>
+                        <div><dt><a href="features.html#members">The member's own view</a></dt><dd>Every Brother and Companion's meetings, invitations and record, on the web and in the Provendium app.</dd></div>
+                        <div><dt><a href="features.html#platform">The platform underneath</a></dt><dd>One sign-in, one set of permissions, and the Provendium API for your website and other Provincial services.</dd></div>
+                    </dl>
+                    <p class="parts-note">Each part is switched on when a Province is ready for it. New parts are added on the same foundation.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container narrow">
-                <h2>What's Provendium?</h2>
-                <p class="lead">Running a Province means keeping track of hundreds of meetings, the officers who attend them, and the members who need to know. Today that work is usually spread across spreadsheets, documents, web forms and a calendar widget on the website.</p>
-                <p class="lead">Provendium brings it into one place. The name is where it comes from: a Provincial compendium.</p>
-                <p class="etymology"><span class="hl">Prov</span>incial&nbsp;comp<span class="hl">endium</span></p>
-            </div>
-        </section>
+        <section class="band band-white" id="walk">
+            <div class="page">
+                <h2>Follow one meeting through it</h2>
+                <p class="sub">The meeting ringed in gold above is the Installation of Lodge of St John No. 104. Here is everything that happens around it, and which part of Provendium does the work. The screens are illustrative, with made-up names.</p>
 
-        <section class="section alt" id="what-it-does">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow ruled">What it does</p>
-                    <h2>Everything a Province needs to plan its year.</h2>
-                    <p class="lead">One system for the diary, the people, the meetings and the work around them. Here is the shape of it. The <a href="features.html">features page</a> goes through each in detail.</p>
-                </div>
-                <div class="grid">
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-calendar"></use></svg></span>
-                        <h3>A single Provincial diary</h3>
-                        <p>Every Lodge and Chapter meeting in one place, with the business of each occasion, planned and published from the same system.</p>
-                        <div class="card-tags"><span class="tag tag-craft">Craft</span><span class="tag tag-ra">Royal Arch</span></div>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-monitor"></use></svg></span>
-                        <h3>A calendar for your website</h3>
-                        <p>An embeddable widget for your Provincial website, in month, list or compact form, with venue maps and directions. It matches your site and updates on its own.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-rss"></use></svg></span>
-                        <h3>Subscribe in your own calendar</h3>
-                        <p>Members can follow the Provincial diary, a Lodge, a Provincial role or their own meetings in Apple, Google or Outlook, and it stays current.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-landmark"></use></svg></span>
-                        <h3>Lodge and Chapter registers</h3>
-                        <p>Every unit and its officers, the full establishment shown filled and vacant, kept up to date without spreadsheets.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-history"></use></svg></span>
-                        <h3>Brethren and their service</h3>
-                        <p>One record for each Brother, with the offices and memberships held over time, and a directory you can search.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-mail"></use></svg></span>
-                        <h3>Invitations and replies</h3>
-                        <p>Members invited to the meetings that concern them. They reply in one click, with no login, and reminders are chased for you.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-utensils"></use></svg></span>
-                        <h3>Attendance and the festive board</h3>
-                        <p>Who is attending and who is dining, with dietary needs, seating plans and place cards for the DC team.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-armchair"></use></svg></span>
-                        <h3>The ceremonies team</h3>
-                        <p>A shared diary and section for the Director of Ceremonies team, with confirmed attendees and briefing sheets for each occasion.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-file"></use></svg></span>
-                        <h3>Summons and notices</h3>
-                        <p>The summons for each meeting kept with it, and notices sent to the right people, with a weekly digest and safeguards against over-sending.</p>
-                    </div>
-                    <div class="card">
-                        <span class="mark" aria-hidden="true"><svg class="icon"><use href="icons.svg#i-award"></use></svg></span>
-                        <h3>Milestones</h3>
-                        <p>Centenaries and other anniversaries flagged ahead of time, so none is missed.</p>
-                    </div>
-                </div>
-                <p class="mt-2"><a class="btn btn-navy" href="features.html">All features <svg class="icon" aria-hidden="true"><use href="icons.svg#i-arrow-right"></use></svg></a></p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="feature-row">
-                    <div class="feature-copy">
-                        <span class="kicker"><svg class="icon" aria-hidden="true"><use href="icons.svg#i-monitor"></use></svg>On your website</span>
-                        <h3>A calendar that lives on your Province's site.</h3>
-                        <p class="lead">Publish once and the meetings appear on your website in a widget that matches it. Choose a month grid, a list or a compact view, restrict it to the calendars you want, and lock it to your own domains.</p>
-                        <ul class="mini-list">
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Month, list or compact, as you prefer</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Venue address, map and directions on each entry</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Updates itself when the diary changes</li>
-                        </ul>
-                    </div>
-                    <div class="feature-visual">
-                        <div class="embed-frame" role="img" aria-label="A Provincial website showing an embedded Provendium calendar of upcoming meetings.">
-                            <div class="embed-chrome"><span class="dot" style="background:var(--ra);opacity:.7"></span><span class="dot" style="background:var(--gold);opacity:.7"></span><span class="dot" style="background:var(--craft);opacity:.7"></span><span class="url">www.your-province.org.uk/calendar</span></div>
-                            <div class="embed-inner">
-                                <div class="ew-title">Upcoming meetings</div>
-                                <div class="mock-list">
-                                    <div class="mock-item"><span class="rail craft"></span><span class="when"><span class="d">10</span><span class="m">Jun</span></span><span class="body"><span class="t">Lodge of St John No. 104</span><span class="s">Installation &middot; 6:00pm &middot; Masonic Hall</span></span></div>
-                                    <div class="mock-item"><span class="rail ra"></span><span class="when"><span class="d">12</span><span class="m">Jun</span></span><span class="body"><span class="t">Chapter of Harmony No. 58</span><span class="s">Convocation &middot; 6:30pm &middot; Provincial Hall</span></span></div>
-                                    <div class="mock-item"><span class="rail"></span><span class="when"><span class="d">21</span><span class="m">Jun</span></span><span class="body"><span class="t">Provincial Garden Party</span><span class="s">Social &middot; 1:00pm &middot; The Grange</span></span></div>
+                <ol class="stages">
+                    <li class="stage">
+                        <div class="stage-rail" aria-hidden="true"></div>
+                        <div class="stage-main">
+                            <div class="stage-copy">
+                                <p class="when">Before anyone types anything</p>
+                                <h3>The meeting is already in the diary</h3>
+                                <p>The Lodge's meetings are created from the record of when it meets. Nobody keys in a year of dates, and the officers shown against each meeting come from the same record.</p>
+                                <span class="badge badge-prov part">The Provincial record</span>
+                            </div>
+                            <div class="pv-card">
+                                <div class="pv-card-header"><h3>Lodge of St John No. 104</h3><span class="badge badge-craft"><span class="dot"></span>Craft</span></div>
+                                <div class="pv-card-body">
+                                    <p class="rule">Meets on the <b>2nd Wednesday</b>, September to June, at the <b>Masonic Hall</b></p>
+                                    <ul class="rows">
+                                        <li><span>Wednesday 8 April 2026<small>Regular meeting, 6:30pm</small></span><span class="status-chip success">Published</span></li>
+                                        <li><span>Wednesday 13 May 2026<small>Regular meeting, 6:30pm</small></span><span class="status-chip success">Published</span></li>
+                                        <li><span>Wednesday 10 June 2026<small>Installation, 6:00pm</small></span><span class="status-chip success">Published</span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="feature-row reverse">
-                    <div class="feature-copy">
-                        <span class="kicker"><svg class="icon" aria-hidden="true"><use href="icons.svg#i-utensils"></use></svg>The festive board</span>
-                        <h3>Attendance, dining and seating, handled.</h3>
-                        <p class="lead">Members say whether they are attending and whether they are dining, in the same one-click reply. The DC team sees the numbers, the dietary needs and a seating plan they can arrange, print and turn into place cards.</p>
-                        <ul class="mini-list">
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Attendance and dining as two separate answers</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Dietary requirements gathered with the reply</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="icons.svg#i-check-plain"></use></svg>Seating plan, place cards and a dietary list to print</li>
-                        </ul>
-                    </div>
-                    <div class="feature-visual">
-                        <div class="mock" role="img" aria-label="A seating plan for a festive board, with the top table and guest seats, some marked for dietary needs.">
-                            <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="mock-title"><svg class="icon" aria-hidden="true"><use href="icons.svg#i-armchair"></use></svg>Festive board: seating</span></div>
-                            <div class="mock-body">
-                                <div class="seat-plan">
-                                    <div class="seat-top">Top table</div>
-                                    <div class="seat-rows">
-                                        <div class="seat-line"><span class="seat head"></span><span class="seat head"></span><span class="seat f"></span><span class="seat f"></span><span class="seat head"></span><span class="seat f"></span><span class="seat head"></span><span class="seat head"></span></div>
-                                        <div class="seat-line"><span class="seat f"></span><span class="seat diet"></span><span class="seat f"></span><span class="seat f"></span><span class="seat f"></span><span class="seat diet"></span><span class="seat f"></span><span class="seat f"></span></div>
-                                        <div class="seat-line"><span class="seat f"></span><span class="seat f"></span><span class="seat f"></span><span class="seat diet"></span><span class="seat f"></span><span class="seat f"></span><span class="seat"></span><span class="seat"></span></div>
+                    <li class="stage">
+                        <div class="stage-rail" aria-hidden="true"></div>
+                        <div class="stage-main">
+                            <div class="stage-copy">
+                                <p class="when">Five weeks before</p>
+                                <h3>The Secretary builds the summons</h3>
+                                <p>The Summons Builder writes the summons from the Lodge's own records, in the Lodge's established layout. The officers, the ranks, the dates and the minutes date are filled in, so they cannot be mistyped.</p>
+                                <span class="badge badge-prov part">Lodge and Chapter administration</span>
+                            </div>
+                            <div class="pv-card">
+                                <div class="pv-card-header"><h3>Summons: Installation, 10 June</h3><span class="status-chip success">Issued, version 3</span></div>
+                                <div class="pv-card-body">
+                                    <p class="summons-head">Business of the evening</p>
+                                    <ol class="business">
+                                        <li>To open the Lodge.</li>
+                                        <li>To confirm the minutes of the meeting held on Wednesday 13 May 2026.</li>
+                                        <li>To ballot for Mr J. Ellison, a candidate for initiation.</li>
+                                        <li>To install the Master Elect, Bro. A. Hartley.</li>
+                                        <li>To invest the officers for the ensuing year.</li>
+                                    </ol>
+                                </div>
+                                <div class="pv-card-footer">Printed, on the web and as an accessible PDF, from the same record.</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="stage">
+                        <div class="stage-rail" aria-hidden="true"></div>
+                        <div class="stage-main">
+                            <div class="stage-copy">
+                                <p class="when">Four weeks before</p>
+                                <h3>The invitations go out, and the replies come back</h3>
+                                <p>The people who should be there are invited by email and reply in one click, with no login. Nobody copies replies into a spreadsheet, and reminders are chased for you.</p>
+                                <span class="badge badge-prov part">Meetings and the diary</span>
+                            </div>
+                            <div class="stack">
+                                <div class="kpis">
+                                    <div class="kpi"><div class="k">Attending</div><div class="v">46</div></div>
+                                    <div class="kpi"><div class="k">Dining</div><div class="v">41</div></div>
+                                    <div class="kpi"><div class="k">Apologies</div><div class="v">9</div></div>
+                                    <div class="kpi"><div class="k">Awaiting</div><div class="v">4</div></div>
+                                </div>
+                                <div class="pv-card">
+                                    <div class="pv-card-body">
+                                        <ul class="people">
+                                            <li><span class="person"><span class="pa">AH</span><span><span class="pn">A. Hartley</span><span class="pr">Master Elect</span></span></span><span class="rsvp-chip rsvp-yes">Attending, dining</span></li>
+                                            <li><span class="person"><span class="pa alt">DO</span><span><span class="pn">D. Okafor</span><span class="pr">Junior Warden</span></span></span><span class="rsvp-chip rsvp-yes">Attending, dining (vegetarian)</span></li>
+                                            <li><span class="person"><span class="pa alt3">PL</span><span><span class="pn">P. Lindqvist</span><span class="pr">Past Master</span></span></span><span class="rsvp-chip rsvp-no">Apologies</span></li>
+                                            <li><span class="person"><span class="pa">GT</span><span><span class="pn">G. Tanner</span><span class="pr">Junior Deacon</span></span></span><span class="rsvp-chip rsvp-pending">Reminder sent</span></li>
+                                        </ul>
                                     </div>
-                                    <div class="cal-legend"><span><i style="background:var(--ra);border-radius:50%"></i>Top table</span><span><i style="background:var(--gold);border-radius:50%"></i>Seated</span><span><i style="background:var(--craft);border-radius:50%"></i>Dietary need</span></div>
                                 </div>
                             </div>
                         </div>
+                    </li>
+
+                    <li class="stage">
+                        <div class="stage-rail" aria-hidden="true"></div>
+                        <div class="stage-main">
+                            <div class="stage-copy">
+                                <p class="when">The week before</p>
+                                <h3>The festive board is seated</h3>
+                                <p>Everyone who said they are dining is ready to place. The DC team arranges the top table and the sprigs, prints the place cards, and the caterer gets the dietary sheet.</p>
+                                <span class="badge badge-prov part">Dining and hospitality</span>
+                            </div>
+                            <div class="pv-card">
+                                <div class="pv-card-header"><h3>Festive board: seating</h3><span class="status-chip info">41 dining</span></div>
+                                <div class="pv-card-body">
+                                <svg class="plan" viewBox="0 0 400 252" role="img" aria-label="A seating plan: a top table across the head of the room and three sprigs running down from it, with a few seats marked for dietary needs.">
+                                    <g fill="none" stroke-linecap="round" stroke-dasharray="0 26">
+                                        <path stroke="#872121" stroke-width="15" d="M70 20h270"/><path stroke="#fbe9e9" stroke-width="12" d="M70 20h270"/>
+                                        <path stroke="#a18337" stroke-width="15" d="M77 88v160M123 88v160M177 88v160M223 88v160M277 88v160M323 88v160"/>
+                                        <path stroke="#f8f1de" stroke-width="12" d="M77 88v160M123 88v160M177 88v160M223 88v160M277 88v160M323 88v160"/>
+                                    </g>
+                                    <g fill="#e8f1fb" stroke="#2c5d9e" stroke-width="1.5"><circle cx="123" cy="140" r="6.75"/><circle cx="177" cy="192" r="6.75"/><circle cx="277" cy="114" r="6.75"/></g>
+                                    <g fill="#001733"><rect x="50" y="38" width="300" height="18" rx="3"/><rect x="91" y="78" width="18" height="170" rx="3"/><rect x="191" y="78" width="18" height="170" rx="3"/><rect x="291" y="78" width="18" height="170" rx="3"/></g>
+                                </svg>
+                                </div>
+                                <div class="pv-card-footer"><div class="legend"><span><i style="background:var(--color-arch)"></i>Top table</span><span><i style="background:var(--color-provincial)"></i>Seated</span><span><i style="background:var(--color-craft)"></i>Dietary need</span></div></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="stage">
+                        <div class="stage-rail" aria-hidden="true"></div>
+                        <div class="stage-main">
+                            <div class="stage-copy">
+                                <p class="when">Afterwards</p>
+                                <h3>The record is already up to date</h3>
+                                <p>The new officers are on the Lodge's register and on each Brother's record of service. The Installation appears in the reports the Province's leadership reads, without anyone sending a return.</p>
+                                <span class="badge badge-prov part">Leadership and reporting</span>
+                            </div>
+                            <div class="pv-card">
+                                <div class="pv-card-header"><h3>After the Installation</h3><span class="status-chip success">Meeting closed</span></div>
+                                <div class="pv-card-body">
+                                    <ul class="rows">
+                                        <li><span>Officers for the year<small>Lodge register and members' records</small></span><span class="status-chip success">Updated</span></li>
+                                        <li><span>Attendance<small>46 present, including 7 visiting officers</small></span><span class="status-chip success">Recorded</span></li>
+                                        <li><span>Installations report<small>For the Rulers and the Area</small></span><span class="status-chip info">Included</span></li>
+                                        <li><span>Next meeting<small>Wednesday 9 September 2026</small></span><span class="status-chip success">Published</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="band app" id="app">
+            <div class="page app-grid">
+                <div>
+                    <span class="hero-divider"></span>
+                    <h2>And in your pocket: the Provendium app</h2>
+                    <p class="sub">The same record, the same sign-in and the same permissions, on an iPhone. A member sees his own meetings and invitations. The Office and the DC team see what needs their attention.</p>
+                    <p class="sub">Meetings, directions and seating are kept on the phone, so they are there even with no signal at the venue.</p>
+                    <p class="after"><a class="btn btn-gold" href="features.html#members">About the app</a></p>
+                </div>
+                <div class="shots">
+                    <figure class="shot"><img src="app-office.jpg" alt="The Provendium app's home screen for a Provincial Grand Director of Ceremonies, showing upcoming meetings, drafts to publish, replies awaited and DC duties." width="591" height="1280" loading="lazy"><figcaption>What needs your attention</figcaption></figure>
+                    <figure class="shot"><img src="app-diary.jpg" alt="The Provendium app's Diary screen, listing meetings by month with filters for Craft, Royal Arch and deputations." width="591" height="1280" loading="lazy"><figcaption>The diary</figcaption></figure>
+                    <figure class="shot"><img src="app-dining.jpg" alt="The Provendium app's Dining screen, listing festive boards with their covers, bookings and dietary needs." width="591" height="1280" loading="lazy"><figcaption>Dining</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="page">
+                <h2>And the parts that meeting did not need</h2>
+                <p class="sub">An Installation uses a good deal of Provendium. It does not use all of it.</p>
+                <ul class="also three">
+                    <li><strong>Ticketing</strong>Tickets for Provincial Grand Lodge and other large occasions. Members book with their own sign-in, so there is no form and no separate guest list.<br><a href="features.html#meetings">About ticketing</a></li>
+                    <li><strong>The Summons Builder</strong>For every regular meeting too: the candidates, the ballots and the Past Masters roll, drawn from the record each month.<br><a href="features.html#administration">About the Summons Builder</a></li>
+                    <li><strong>The Provendium API</strong>Your Provincial website, Lodge websites and other Provincial services read the same live data, without keeping copies of it.<br><a href="features.html#platform">About the API</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="band band-white" id="roles">
+            <div class="page">
+                <h2>What do you do in the Province?</h2>
+                <p class="sub">Everyone works from the same record and sees what their role needs.<span class="needs-js"> Choose yours.</span></p>
+
+                <div class="pv-tabs" role="tablist" aria-label="Your role">
+                    <button type="button" role="tab" id="tab-office" aria-controls="panel-office" aria-selected="true">The Provincial Office</button>
+                    <button type="button" role="tab" id="tab-lead" aria-controls="panel-lead" aria-selected="false" tabindex="-1">Rulers and Area leaders</button>
+                    <button type="button" role="tab" id="tab-sec" aria-controls="panel-sec" aria-selected="false" tabindex="-1">Secretaries and Scribes</button>
+                    <button type="button" role="tab" id="tab-dc" aria-controls="panel-dc" aria-selected="false" tabindex="-1">The DC team</button>
+                    <button type="button" role="tab" id="tab-member" aria-controls="panel-member" aria-selected="false" tabindex="-1">Members</button>
+                </div>
+
+                <div class="panel" role="tabpanel" id="panel-office" aria-labelledby="tab-office" tabindex="0">
+                    <div>
+                        <p class="panel-role">The Provincial Office</p>
+                        <h3>The record, the diary and the administration in one place</h3>
+                        <ul class="gets">
+                            <li><b>One record, kept current</b><span>Members, Lodges, Chapters, offices and ranks, refreshed every day and checked before anything changes.</span></li>
+                            <li><b>Registers that show the gaps</b><span>Every unit's officers, filled and vacant, and worklists for details that are missing.</span></li>
+                            <li><b>Provincial celebrations and ticketing</b><span>Anniversaries and centenaries flagged ahead of time, the team invited and chased, and tickets added to any event.</span></li>
+                            <li><b>Reports on screen or exported</b><span>Officers, meetings, replies and communications, without building a spreadsheet.</span></li>
+                        </ul>
+                    </div>
+                    <div class="pv-card">
+                        <div class="pv-card-header"><h3>Lodge of St John No. 104: officers</h3><span class="status-chip warn">2 offices vacant</span></div>
+                        <div class="pv-card-body">
+                            <ul class="people">
+                                <li><span class="person"><span class="pa">AH</span><span><span class="pn">A. Hartley</span><span class="pr">Worshipful Master</span></span></span><span class="badge badge-craft"><span class="dot"></span>Since June 2026</span></li>
+                                <li><span class="person"><span class="pa alt">DO</span><span><span class="pn">D. Okafor</span><span class="pr">Senior Warden</span></span></span><span class="badge badge-craft"><span class="dot"></span>Since June 2026</span></li>
+                                <li><span class="person is-vacant"><span class="pa vacant"></span><span><span class="pn">Vacant</span><span class="pr">Junior Warden</span></span></span><span class="badge">To be appointed</span></li>
+                                <li><span class="person"><span class="pa alt2">RM</span><span><span class="pn">R. Mehta</span><span class="pr">Secretary</span></span></span><span class="badge badge-craft"><span class="dot"></span>Since June 2023</span></li>
+                                <li><span class="person is-vacant"><span class="pa vacant"></span><span><span class="pn">Vacant</span><span class="pr">Almoner</span></span></span><span class="badge">To be appointed</span></li>
+                            </ul>
+                        </div>
+                        <div class="pv-card-footer">Illustrative, with made-up names.</div>
+                    </div>
+                </div>
+
+                <div class="panel" role="tabpanel" id="panel-lead" aria-labelledby="tab-lead" tabindex="0" hidden>
+                    <div>
+                        <p class="panel-role">Rulers and Area leaders</p>
+                        <h3>What you need to run the Province, without asking for a report</h3>
+                        <ul class="gets">
+                            <li><b>Membership at a glance</b><span>Gains and losses by month and by Area, with a summary for each Lodge and Chapter.</span></li>
+                            <li><b>Installations and their Representatives</b><span>Every confirmed Installation, who is representing the Province, and notices sent when anything changes.</span></li>
+                            <li><b>Your own Areas</b><span>Each leader sees the Areas they are responsible for, and no more.</span></li>
+                        </ul>
+                    </div>
+                    <div class="stack">
+                        <div class="kpis three">
+                            <div class="kpi"><div class="k">Joined</div><div class="v">38</div></div>
+                            <div class="kpi"><div class="k">Left</div><div class="v">31</div></div>
+                            <div class="kpi"><div class="k">Net</div><div class="v">+7</div></div>
+                        </div>
+                        <div class="pv-card">
+                            <div class="pv-card-header"><h3>Membership by Area, year to date</h3><span class="badge">Craft</span></div>
+                            <div class="pv-card-body">
+                                <table class="report">
+                                    <thead><tr><th>Area</th><th class="n">Joined</th><th class="n">Left</th><th class="n">Net</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Area 1</td><td class="n">11</td><td class="n">6</td><td class="n up">+5</td></tr>
+                                        <tr><td>Area 2</td><td class="n">7</td><td class="n">9</td><td class="n down">-2</td></tr>
+                                        <tr><td>Area 3</td><td class="n">9</td><td class="n">5</td><td class="n up">+4</td></tr>
+                                        <tr><td>Area 4</td><td class="n">6</td><td class="n">7</td><td class="n down">-1</td></tr>
+                                        <tr><td>Area 5</td><td class="n">5</td><td class="n">4</td><td class="n up">+1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pv-card-footer">Illustrative figures.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel" role="tabpanel" id="panel-sec" aria-labelledby="tab-sec" tabindex="0" hidden>
+                    <div>
+                        <p class="panel-role">Secretaries and Scribes</p>
+                        <h3>Less paperwork, and nothing typed twice</h3>
+                        <ul class="gets">
+                            <li><b>Your meetings are already there</b><span>Confirm the work and publish. The diary, your website and your members' calendars follow.</span></li>
+                            <li><b>The Summons Builder</b><span>The summons written from your Lodge's records, in your Lodge's layout, instead of edited by hand each month.</span></li>
+                            <li><b>A weekly update</b><span>One email on a Sunday evening with what is coming up and what needs your attention.</span></li>
+                            <li><b>Notices that send themselves</b><span>If a meeting moves or is cancelled, the right people are told.</span></li>
+                        </ul>
+                    </div>
+                    <div class="pv-card">
+                        <div class="pv-card-header"><h3>Your weekly update</h3><span class="badge">Sunday evening</span></div>
+                        <div class="pv-card-body">
+                            <ul class="rows">
+                                <li><span>Wednesday 10 June, Installation<small>Summons issued, 55 of 59 replies in</small></span><span class="status-chip success">Ready</span></li>
+                                <li><span>Wednesday 9 September, Regular meeting<small>The work has not been entered yet</small></span><span class="status-chip warn">Needs the work</span></li>
+                                <li><span>Wednesday 14 October, Regular meeting<small>Summons not yet started</small></span><span class="status-chip">In good time</span></li>
+                            </ul>
+                        </div>
+                        <div class="pv-card-footer">Illustrative.</div>
+                    </div>
+                </div>
+
+                <div class="panel" role="tabpanel" id="panel-dc" aria-labelledby="tab-dc" tabindex="0" hidden>
+                    <div>
+                        <p class="panel-role">The DC team</p>
+                        <h3>Who is going where, and who is confirmed</h3>
+                        <ul class="gets">
+                            <li><b>A diary for the team</b><span>A DC assigned to each occasion, with their tasks and any last-minute changes.</span></li>
+                            <li><b>Attendance lists to print</b><span>Confirmed attendees for each occasion, in order of precedence.</span></li>
+                            <li><b>Seating for the festive board</b><span>Arrange the top table and the sprigs, then print the plan and the place cards.</span></li>
+                        </ul>
+                    </div>
+                    <div class="pv-card">
+                        <div class="pv-card-header"><h3>DC diary: this week</h3><span class="status-chip info">3 occasions</span></div>
+                        <div class="pv-card-body">
+                            <ul class="people">
+                                <li><span class="person"><span class="pa">JW</span><span><span class="pn">Lodge of St John No. 104, Installation</span><span class="pr">Wed 10 June, J. Whitfield assigned</span></span></span><span class="status-chip success">List printed</span></li>
+                                <li><span class="person"><span class="pa alt3">SB</span><span><span class="pn">Chapter of Harmony No. 58, Convocation</span><span class="pr">Fri 12 June, S. Brennan assigned</span></span></span><span class="status-chip warn">1 change</span></li>
+                                <li><span class="person"><span class="pa alt2">All</span><span><span class="pn">Provincial Grand Lodge, Annual meeting</span><span class="pr">Sat 13 June, the whole team</span></span></span><span class="status-chip info">Briefing ready</span></li>
+                            </ul>
+                        </div>
+                        <div class="pv-card-footer">Illustrative, with made-up names.</div>
+                    </div>
+                </div>
+
+                <div class="panel" role="tabpanel" id="panel-member" aria-labelledby="tab-member" tabindex="0" hidden>
+                    <div>
+                        <p class="panel-role">Members</p>
+                        <h3>Your Freemasonry in one place</h3>
+                        <ul class="gets">
+                            <li><b>Your meetings</b><span>Every meeting of your own Lodges and Chapters, with the work, the venue, directions and the summons.</span></li>
+                            <li><b>The whole Province's diary</b><span>Search it by Area, unit or work, and subscribe on your phone. It stays current.</span></li>
+                            <li><b>Reply in one click</b><span>No login and no password. Say whether you are attending and whether you are dining.</span></li>
+                            <li><b>The Provendium app</b><span>All of it on your iPhone, with reminders, and available with no signal at the venue.</span></li>
+                        </ul>
+                    </div>
+                    <div class="pv-card" id="invite">
+                        <div class="pv-card-header"><h3>You are invited</h3><span class="badge badge-craft"><span class="dot"></span>Craft</span></div>
+                        <div class="pv-card-body">
+                            <strong>Lodge of St John No. 104, Installation</strong>
+                            <p class="invite-meta">Wednesday 10 June 2026, 6:00pm, Masonic Hall</p>
+                            <div class="ask"><span id="q-attend">Will you attend?</span><div role="group" aria-labelledby="q-attend"><button class="btn btn-sm btn-secondary" type="button" data-q="attend" data-a="yes" aria-pressed="false">Yes</button><button class="btn btn-sm btn-secondary" type="button" data-q="attend" data-a="no" aria-pressed="false">No</button></div></div>
+                            <div class="ask"><span id="q-dine">Will you dine at the festive board?</span><div role="group" aria-labelledby="q-dine"><button class="btn btn-sm btn-secondary" type="button" data-q="dine" data-a="yes" aria-pressed="false">Yes</button><button class="btn btn-sm btn-secondary" type="button" data-q="dine" data-a="no" aria-pressed="false">No</button></div></div>
+                        </div>
+                        <div class="pv-card-footer"><p class="reply-state" id="reply-state" aria-live="polite">Illustrative<span class="needs-js">. Try answering it.</span></p></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section navy">
-            <div class="container narrow">
-                <p class="eyebrow ruled">Privacy at the foundation</p>
+        <section class="band privacy">
+            <div class="page">
+                <span class="hero-divider"></span>
                 <h2>Built for the discretion Freemasonry expects.</h2>
-                <p class="lead">Each Province is kept separate from every other. Sensitive contact details are encrypted, and members see only what they should. Privacy is designed in from the start, not added on.</p>
-                <p class="mt-2"><a class="btn btn-primary" href="security.html">How we protect your data <svg class="icon" aria-hidden="true"><use href="icons.svg#i-arrow-right"></use></svg></a></p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container narrow">
-                <h2>Who it's for</h2>
-                <ul class="lead-list">
-                    <li><strong>The Provincial Office:</strong> the diary, the registers and the administration in one place.</li>
-                    <li><strong>Secretaries and Scribes:</strong> meetings, contacts and notices without the paperwork.</li>
-                    <li><strong>The DC team:</strong> who is attending each occasion, and the seating and dining that follow.</li>
-                    <li><strong>Members:</strong> who want to know what's on and where, and to follow it in their own calendar.</li>
+                <ul>
+                    <li>The data belongs to the Province, which decides how it is used.</li>
+                    <li>Each Province is kept separate from every other.</li>
+                    <li>Contact, dietary and health details are encrypted.</li>
+                    <li>Members see only what their role needs.</li>
                 </ul>
-                <p class="mt-2"><a class="btn btn-navy" href="for-provinces.html">For Provinces considering it <svg class="icon" aria-hidden="true"><use href="icons.svg#i-arrow-right"></use></svg></a></p>
+                <a class="btn btn-gold" href="security.html">How we protect your data</a>
             </div>
         </section>
 
-        <section class="section alt">
-            <div class="container">
-                <div class="cta-band">
-                    <h2>Want to know more?</h2>
-                    <p>If you spotted Provendium on your Province's calendar, or you are a Province considering it, send us a message.</p>
-                    <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        <section class="band contact" id="contact">
+            <div class="page">
+                <div>
+                    <h2>The diary was where it started.</h2>
+                    <p>If you spotted Provendium on your Province's calendar, or you are a Province considering it, we would be glad to show you the rest.</p>
                 </div>
+                <a class="mail" href="mailto:hello@provendium.app">hello@provendium.app</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="foot-cols">
-                <div>
-                    <a class="brand" href="index.html">Provendium</a>
-                    <div class="foot-tag">The Provincial Compendium. The diary, the registers and the administration for your Province, in one place.</div>
-                    <div class="foot-meta" style="margin-top:14px"><span>A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a></span></div>
-                </div>
-                <div>
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="security.html">Security &amp; privacy</a></li>
-                        <li><a href="for-provinces.html">For Provinces</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Provendium</h4>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="mailto:hello@provendium.app">hello@provendium.app</a></li>
-                    </ul>
-                </div>
+        <div class="page">
+            <div class="foot-row">
+                <a class="brand" href="index.html">
+                <span class="brand-mark"><img src="provendium-mark.png" alt="" width="38" height="38"></span>
+                <span class="brand-text"><span class="title">Provendium&reg;</span><span class="sub">The Provincial Compendium</span></span>
+            </a>
+                <nav class="foot-nav" aria-label="Footer">
+                    <a href="features.html">Features</a>
+                    <a href="security.html">Security and privacy</a>
+                    <a href="for-provinces.html">For Provinces</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mailto:hello@provendium.app">hello@provendium.app</a>
+                </nav>
             </div>
-            <hr class="foot-divider">
-            <p class="foot-small">An independent software platform for Masonic Provinces. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
+            <p class="foot-small">An independent software platform for Masonic Provinces. A product of <a href="https://addedpixels.com" rel="noopener">addedPIXELS</a>. Provendium&reg; is a registered trade mark of addedPIXELS Limited, registered in England &amp; Wales (company no.&nbsp;16220245). Registered office: Bank Chambers, Market Place, Stockport, Greater Manchester, SK1&nbsp;1AR. &copy; 2026 addedPIXELS Limited. All rights reserved.</p>
         </div>
     </footer>
 </body>
